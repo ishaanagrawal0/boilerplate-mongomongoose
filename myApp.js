@@ -1,5 +1,7 @@
-require('dotenv').config();
+const { connect, Mongoose } = require('mongoose');
 
+require('dotenv').config();
+Mongoose.connect(sample.env.MONGO_URI);
 
 let Person;
 
