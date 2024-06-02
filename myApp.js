@@ -1,8 +1,8 @@
-const { connect, Mongoose } = require('mongoose');
+const Mongoose = require('mongoose')
 
 require('dotenv').config();
-Mongoose.connect(sample.env.MONGO_URI);
-
+Mongoose.connect(process.env.MONGO_URI);
+console.log(Mongoose.connection.readyState);
 let Person;
 
 const createAndSavePerson = (done) => {
